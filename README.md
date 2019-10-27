@@ -12,7 +12,7 @@ Strategies and associated ML/NLP libraries that will be presented are:
   - feature extraction using a trained [Word2Vec](https://en.wikipedia.org/wiki/Word2vec) embedding from scratch with the aid of the [Gensim NLP library](https://radimrehurek.com/gensim/)
   - feature extraction using a trained [Doc2Vec](https://radimrehurek.com/gensim/models/doc2vec.html) embedding from scratch also with the aid of the Gensim library
   
-Models developed from these strategies will be compared against each other for the Kaggle competition problem of identifying duplicate questions using the [Quora dataset](https://www.kaggle.com/currie32/predicting-similarity-tfidfvectorizer-doc2vec/data). These models will also be used for computing the document similarity of the popular [NPL 20 News Group problem](https://www.kaggle.com/irfanalidv/suggectedjob) 
+Models developed from these strategies will be compared against each other for the Kaggle competition problem of identifying duplicate questions using the [Quora dataset](https://www.kaggle.com/currie32/predicting-similarity-tfidfvectorizer-doc2vec/data). These models will also be used for computing the document similarity of the popular [NPL 20 News Group problem.](https://www.kaggle.com/irfanalidv/suggectedjob) 
 
 
 
