@@ -42,7 +42,7 @@ Although this project is currently work-in-progress, some of the completed compo
   - __TFIDFDocmentVectorExtractor.py__: used to build a TF-IDF based feature vector extration model
   - __DocumentFeatureVisualization.py__: used to reduce the dimensions of the feature matrix based on techniques such as PCA, T-SNE, MDS and UMAP.It allows provides the visualization infrastructure to plot similarity Heatmap  and the visualizations of documents in 2D space
 
-You canfuther explore these details of the project by running [this Jupyter notebook](https://github.com/aidowu1/Ades-NLP-Recepies/blob/master/Exploration%20of%20Document%20Similarity%20Models/Exploration%20of%20Document%20Similarity%20Models.ipynb)
+You can futher explore these details of the project by running [this Jupyter notebook](https://github.com/aidowu1/Ades-NLP-Recepies/blob/master/Exploration%20of%20Document%20Similarity%20Models/Exploration%20of%20Document%20Similarity%20Models.ipynb)
 
 
 
