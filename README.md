@@ -14,3 +14,6 @@ Strategies and associated ML/NLP libraries that will be presented are:
   
 Models developed from these strategies will be compared against each other for the Kaggle competition problem of identifying duplicate questions using the [Quora dataset](https://www.kaggle.com/currie32/predicting-similarity-tfidfvectorizer-doc2vec/data). These models will also be used for computing the document similarity of the popular [NPL 20 News Group problem](https://www.kaggle.com/irfanalidv/suggectedjob) 
 
+
+This project is currently work-in-progress, but you can statrt to explore some of the completed parts of the project by running [this Jupyter notebook](https://github.com/aidowu1/Ades-NLP-Recepies/blob/master/Exploration%20of%20Document%20Similarity%20Models/Exploration%20of%20Document%20Similarity%20Models.ipynb)
+
