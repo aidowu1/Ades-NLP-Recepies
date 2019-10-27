@@ -35,13 +35,14 @@ Pending items for this project include:
 - compare the performance of models
 - add the Quora duplicate problem [see this Kaggle link](https://www.kaggle.com/currie32/predicting-similarity-tfidfvectorizer-doc2vec/data) and use the above models to the problem
     
-Although this project is currently work-in-progress, you can statrt to explore some of the completed coponents such as:
+Although this project is currently work-in-progress, some of the completed componets of the project include:
   - __GenericDataSerializerComponent.py__: used for getting serialised Problem corous data
   - __ProblemSpecificationInterface.py__: used as an interface abstraction to specify a document similarity problem
   - __NLPEngineComponent.py__: used as a NLP pre-processing module for cleaning the raw corpus of text
   - __TFIDFDocmentVectorExtractor.py__: used to build a TF-IDF based feature vector extration model
-  - __DocumentFeatureVisualization.py__: used to reduce the dimensions of the feature matrix based on techniques such as PCA, T-SNE, MDS and UMAP. It laos provides the visualization infrastructure to plot similarity Heatmap  and the visualizations of documents in 2D space
-  
+  - __DocumentFeatureVisualization.py__: used to reduce the dimensions of the feature matrix based on techniques such as PCA, T-SNE, MDS and UMAP.It allows provides the visualization infrastructure to plot similarity Heatmap  and the visualizations of documents in 2D space
 
-of the project by running [this Jupyter notebook](https://github.com/aidowu1/Ades-NLP-Recepies/blob/master/Exploration%20of%20Document%20Similarity%20Models/Exploration%20of%20Document%20Similarity%20Models.ipynb)
+You canfuther explore these details of the project by running [this Jupyter notebook](https://github.com/aidowu1/Ades-NLP-Recepies/blob/master/Exploration%20of%20Document%20Similarity%20Models/Exploration%20of%20Document%20Similarity%20Models.ipynb)
+
+
 
