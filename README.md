@@ -15,5 +15,33 @@ Strategies and associated ML/NLP libraries that will be presented are:
 Models developed from these strategies will be compared against each other for the Kaggle competition problem of identifying duplicate questions using the [Quora dataset](https://www.kaggle.com/currie32/predicting-similarity-tfidfvectorizer-doc2vec/data). These models will also be used for computing the document similarity of the popular [NPL 20 News Group problem](https://www.kaggle.com/irfanalidv/suggectedjob) 
 
 
-This project is currently work-in-progress, but you can statrt to explore some of the completed parts of the project by running [this Jupyter notebook](https://github.com/aidowu1/Ades-NLP-Recepies/blob/master/Exploration%20of%20Document%20Similarity%20Models/Exploration%20of%20Document%20Similarity%20Models.ipynb)
+
+## Update Notes:
+Currently note that this project is work-in-progress. 
+Completed parts of this this project are:
+- TFIDF Feature vector Extractor component 
+- Cosine Similarity Measure
+- Visualization component including options to reduce the feature matrix dimensions to 2D using PCA, MDS, T-SNE and UMAP techniques
+- Plots of the Feature Matrix and the Similarity Matrix Heatmap
+
+Demos of the above features to solve 2 problems, namely:
+- A toy/contrived problem which demonstates how to compute the similarity between documents in a corpus which contains 24 documents (Book titles) using data provided in this [blog](https://shravan-kuchkula.github.io/nlp/document_similarity/#plot-a-heatmap-of-cosine-similarity-values)
+- The popular NLP 20 newsgroups problem with dataset which comprises around 18000 newsgroups posts on 20 topics
+
+Pending items for this project include:
+- build a document feature extarction model using a pre-trained GloVe embedding
+- build a document feature extarction model using using a trained word2Vec embedding from stratch
+- build a document feature extarction model using using a trained doc2Vec embedding from stratch
+- compare the performance of models
+- add the Quora duplicate problem [see this Kaggle link](https://www.kaggle.com/currie32/predicting-similarity-tfidfvectorizer-doc2vec/data) and use the above models to the problem
+    
+Although this project is currently work-in-progress, you can statrt to explore some of the completed coponents such as:
+  - __GenericDataSerializerComponent.py__: used for getting serialised Problem corous data
+  - __ProblemSpecificationInterface.py__: used as an interface abstraction to specify a document similarity problem
+  - __NLPEngineComponent.py__: used as a NLP pre-processing module for cleaning the raw corpus of text
+  - __TFIDFDocmentVectorExtractor.py__: used to build a TF-IDF based feature vector extration model
+  - __DocumentFeatureVisualization.py__: used to reduce the dimensions of the feature matrix based on techniques such as PCA, T-SNE, MDS and UMAP. It laos provides the visualization infrastructure to plot similarity Heatmap  and the visualizations of documents in 2D space
+  
+
+of the project by running [this Jupyter notebook](https://github.com/aidowu1/Ades-NLP-Recepies/blob/master/Exploration%20of%20Document%20Similarity%20Models/Exploration%20of%20Document%20Similarity%20Models.ipynb)
 
