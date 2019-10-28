@@ -45,7 +45,7 @@ Although this project is currently work-in-progress, some of the completed compo
 
 You can futher explore these details of the project by running [this Jupyter notebook](https://github.com/aidowu1/Ades-NLP-Recepies/blob/master/Exploration%20of%20Document%20Similarity%20Models/Exploration%20of%20Document%20Similarity%20Models.ipynb)
 
-To install the python package dependencies required to run this notebook, I will advise that you create a virtual environment with the aid of this [requiremnt file](https://github.com/aidowu1/Ades-NLP-Recepies/blob/master/requirements.txt) using this Pip command:
+To install the python package dependencies required to run this notebook, I will advise that you create a virtual environment with the aid of this [requiremnt.txt file](https://github.com/aidowu1/Ades-NLP-Recepies/blob/master/requirements.txt) using this Pip command:
  - pip3 install -r requirements.txt
 
 
