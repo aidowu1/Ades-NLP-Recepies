@@ -1,4 +1,4 @@
-# Ades-NLP-Recepies
+# Ades-NLP-Recipies
 __Exploration of Document Similarity Models__
 
 _Abstract_: 
