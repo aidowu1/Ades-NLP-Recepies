@@ -16,14 +16,18 @@ Data/reference was based on the blog provided by https://shravan-kuchkula.github
 import pandas as pd
 import numpy as np
 import os
+import pprint
+
 import GenericDataSerializerComponent as s
 import ProblemSpecificationInterface as p
 import NLPEngineComponent as nlp
 import TFIDFDocmentVectorExtractor as tf_idf
 import DocumentFeatureVisualization as dfv
+import Utils as u
 
 
 # Specify contants and variables
+LINE_DIVIDER = "==========" * 5
 DATA_ROOT_PATH = 'Data'
  
 SAMPLE_PROBLEM_DATASET_PATHS = {
@@ -32,7 +36,8 @@ SAMPLE_PROBLEM_DATASET_PATHS = {
 
 
 class ToyProblem(p.IProblemSpec):
-    def __init__(self):
+    def __init__(self, corpus_path: str = None):
+        self.__corpus_path = corpus_path
         self.__num_docs = -1
         self.__corpus = None
         self.__clean_corpus = None
@@ -48,7 +53,10 @@ class ToyProblem(p.IProblemSpec):
         """
         Get the corpus data for this problem
         """
-        self.__corpus = s.GenericDataSerializer.deSerializeCache(SAMPLE_PROBLEM_DATASET_PATHS['Toy_Problem'])
+        if not self.__corpus_path:
+          self.__corpus = s.GenericDataSerializer.deSerializeCache(SAMPLE_PROBLEM_DATASET_PATHS['Toy_Problem'])
+        else:
+         self.__corpus = s.GenericDataSerializer.deSerializeCache(self.__corpus_path) 
         self.__num_docs = len(self.__corpus)
         if self.__doc_ids is None:
             self.__doc_ids = list(range(self.__num_docs))
@@ -80,7 +88,7 @@ class ToyProblem(p.IProblemSpec):
     
     def createLowerTriangularMatrixOfPairs(self):
         """
-        Create triangular matrix indices pairs for the similarity measure
+        Create triangular matrix indices doc_pair_indices for the similarity measure
         """
         matrix = np.zeros((self.__num_docs, self.__num_docs))
         indices = np.tril_indices_from(matrix)
@@ -88,15 +96,37 @@ class ToyProblem(p.IProblemSpec):
         pairs = [(indices[0][i], indices[1][i]) for i in range(n_rows) if not indices[0][i] == indices[1][i]]
         return pairs
 
-    def displaySortedSimilarityMeasures(self):
-        print("\nSorted Similarity Measures (in descending) order are:\n\n")
-        for key, value in sorted(self.__similarity_matrix_dict.items(), key=lambda item: item[1], reverse=True):
-            print("{0}: {1}".format(key, value))
+    def displaySortedSimilarityMeasures(self, top_k: int = 10):
+        query_doc_ids = []
+        current_doc_ids = []
+        query_doc = []
+        current_doc = []
+        scores = []
+        print(f"Total number of computed similarity scores: {len(self.__similarity_matrix_dict.items())}")
+        print(f"\nSorted Similarity Measures (in descending) order and top {top_k} are:\n\n")
+        sorted_sims = sorted(self.__similarity_matrix_dict.items(), key=lambda item: item[1], reverse=True)
+        for key, value in sorted_sims[:top_k]:
+            doc_ids = tuple([int(x) for x in key.split("_")])
+            doc_1_id, doc_2_id = doc_ids
+            query_doc_ids.append(doc_1_id)
+            current_doc_ids.append(doc_2_id)
+            query_doc.append(self.__corpus[doc_1_id])
+            current_doc.append(self.__corpus[doc_2_id])
+            scores.append(value)
+        result_df = pd.DataFrame(data={
+            "query_doc_id": query_doc_ids,
+            "current_doc_id": current_doc_ids,
+            "query_doc": query_doc,
+            "current_doc": current_doc,
+            "similarity score": scores
+        })
+        print(f"\nTop {top_k} Similarity scores:\n{u.Helpers.tableize(result_df)}\n\n")
+
 
     def visualizeDocumentSimilarity(self):
         """
         Provides the visualization of similarity between the Documents in a corpus
-        Each document is labelled with a ID (a sequence number)
+        Each document is labelled with an ID (a sequence number)
         """
         titles = { 
         "2D-Similarity-Plot":"Plot of Feature Matrix points reduced to 2D by MDS for 'Book Titles Toy' Problem",
@@ -111,8 +141,8 @@ class ToyProblem(p.IProblemSpec):
             "Similarity-Heatmap": "Book Title Ids"
         }
         if  self.__visualizer is None:  
-            self.__visualizer = dfv.Visualizer(self.__dense_feature_matrix, self.__doc_ids, 
-                    titles, x_labels, y_labels, self.__similarity_matrix, dfv.DataReductionMethod.mds)
+            self.__visualizer = dfv.Visualizer(self.__dense_feature_matrix, self.__doc_ids,
+                                               titles, x_labels, y_labels, self.__similarity_matrix, dfv.DataReductionType.mds)
         print(f"\nVisualizer details are: {self.__visualizer}")
         self.__visualizer.plot2DRepresentation()
 
@@ -133,8 +163,8 @@ class ToyProblem(p.IProblemSpec):
             "Similarity-Heatmap": "Book Title Ids"
         }
         if  self.__visualizer is None:  
-            self.__visualizer = dfv.Visualizer(self.__dense_feature_matrix, self.__doc_ids, titles, x_labels, y_labels, 
-                                self.__similarity_matrix, dfv.DataReductionMethod.mds)
+            self.__visualizer = dfv.Visualizer(self.__dense_feature_matrix, self.__doc_ids, titles, x_labels, y_labels,
+                                               self.__similarity_matrix, dfv.DataReductionType.mds)
         print(f"\nVisualizer details are: {self.__visualizer}")
         self.__visualizer.plotSimilarityMatrixHeatmap()
 
@@ -157,6 +187,8 @@ class ToyProblem(p.IProblemSpec):
 def demoToyProblem():
     toy_problem = ToyProblem()
     raw_corpus = toy_problem.getCorpus()
+    raw_corpus_df = pd.DataFrame(data={"doc ID": range(len(raw_corpus)), "content": raw_corpus})
+    print(u.Helpers.tableize(raw_corpus_df))
     clean_corpus = toy_problem.cleanCorpus()
     similarity_measures = toy_problem.computeDocSimilarity()
     toy_problem.displaySortedSimilarityMeasures()
@@ -164,7 +196,10 @@ def demoToyProblem():
     toy_problem.plotSimilarityMatrixHeatmap()
 
 if __name__ == "__main__":
+    # toy_problem = ToyProblem()
+    # raw_corpus = toy_problem.getCorpus()
+    # raw_corpus_df = pd.DataFrame(data={"doc ID": range(len(raw_corpus)), "content": raw_corpus})
+    # #pprint.pprint(f"raw_corpus:\n{raw_corpus}")
+    # print(u.Helpers.tableize(raw_corpus_df))
     demoToyProblem()
-
-
-
+    #pass

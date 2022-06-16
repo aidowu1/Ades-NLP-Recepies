@@ -9,32 +9,32 @@ class IProblemSpec(abc.ABC):
         """
         Creates a collection of Feature vectors for corpus or pair of corpora
         """
-        raise NotImplementedError("Need to implement abstrct method: getCorpus()..")
+        raise NotImplementedError("Need to implement abstract method: getCorpus()..")
 
     @abc.abstractmethod
     def cleanCorpus(self):
         """
         Cleans/normalises the corpus
         """
-        raise NotImplementedError("Need to implement abstrct method: cleanCorpus()..")
+        raise NotImplementedError("Need to implement abstract method: cleanCorpus()..")
 
     @abc.abstractmethod
     def computeDocSimilarity(self):
         """
         Computes the similarity between documents in corpus
         """
-        raise NotImplementedError("Need to implement abstrct method: computeDocSimilarity()..")
+        raise NotImplementedError("Need to implement abstract method: computeDocSimilarity()..")
 
     @abc.abstractmethod
     def visualizeDocumentSimilarity(self):
         """
         Computes the Visualization of documents in a corpus
         """
-        raise NotImplementedError("Need to implement abstrct method: visualizeDocumentSimilarity()..")
+        raise NotImplementedError("Need to implement abstract method: visualizeDocumentSimilarity()..")
 
     @abc.abstractmethod
     def plotSimilarityMatrixHeatmap(self):
         """
         Computes the Visualization Document Similarity Matrix Heatmap
         """
-        raise NotImplementedError("Need to implement abstrct method: plotSimilarityMatrixHeatmap()..")
+        raise NotImplementedError("Need to implement abstract method: plotSimilarityMatrixHeatmap()..")

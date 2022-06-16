@@ -83,7 +83,7 @@ class ToyProblem(p.IProblemSpec):
     
     def createLowerTriangularMatrixOfPairs(self):
         """
-        Create triangular matrix indices pairs for the similarity measure
+        Create triangular matrix indices doc_pair_indices for the similarity measure
         """
         matrix = np.zeros((self.__num_docs, self.__num_docs))
         indices = np.tril_indices_from(matrix)
@@ -108,7 +108,7 @@ class ToyProblem(p.IProblemSpec):
         # tsne.show()
         title = "Plot of 'Toy Example' Feature Matrix points reduced to 2D by MDS"
         doc_ids = list(range(self.__num_docs))
-        visualizer = dfv.Visualizer(self.__dense_feature_matrix, title, doc_ids, dfv.DataReductionMethod.mds)
+        visualizer = dfv.Visualizer(self.__dense_feature_matrix, title, doc_ids, dfv.DataReductionType.mds)
         print(f"\nVisualizer details are: {visualizer}")
         visualizer.plot2DRepresentation()
 

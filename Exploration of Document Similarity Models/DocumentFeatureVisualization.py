@@ -22,7 +22,7 @@ class Point(object):
         return msg
 
 
-class DataReductionMethod(Enum):
+class DataReductionType(Enum):
     mds = 0
     pca = 1
     tsne = 3
@@ -80,7 +80,7 @@ class Visualizer(object):
             x_labels = None,
             y_labels = None,
             similarity_matrix_scores = None,
-            data_redution_method = DataReductionMethod.mds,
+            data_redution_method = DataReductionType.mds,
             is_one_2_many_match = True,
     ):
         self.__is_one_2_many_match = is_one_2_many_match
@@ -100,13 +100,13 @@ class Visualizer(object):
         Method to used to reduce the dimensionality of Target/Reference vectors to 2-D using Multi Dimension Scaling (MDS)
         :return: None
         """        
-        if self.__data_reduction_method == DataReductionMethod.mds:
+        if self.__data_reduction_method == DataReductionType.mds:
             return self.mdsDataReductionTo2D()
-        elif self.__data_reduction_method == DataReductionMethod.pca:
+        elif self.__data_reduction_method == DataReductionType.pca:
             return self.pcaDataReductionTo2D()
-        elif self.__data_reduction_method == DataReductionMethod.tsne:
+        elif self.__data_reduction_method == DataReductionType.tsne:
             return self.tsneDataReductionTo2D()
-        elif self.__data_reduction_method == DataReductionMethod.umap:
+        elif self.__data_reduction_method == DataReductionType.umap:
             return self.umapDataReductionTo2D()
         else:
             return self.mdsDataReductionTo2D()
@@ -240,8 +240,8 @@ def test_Visualizer_With_PCA_Reduction_Is_Valid():
         "2D-Similarity-Plot":"Y coordinates",
         "Similarity-Heatmap": "Doc Ids"
     }
-    visualizer = Visualizer(raw_feature_matrix, doc_ids, titles, 
-                       x_labels, y_labels, DataReductionMethod.umap)
+    visualizer = Visualizer(raw_feature_matrix, doc_ids, titles,
+                            x_labels, y_labels, DataReductionType.umap)
     print(f"\nVisualizer details are: {visualizer}")
     visualizer.plot2DRepresentation()
 
@@ -274,7 +274,7 @@ def test_Visualizer_Plot_Similarity_Matrix_Heatmap_Is_valid():
         "Similarity-Heatmap": "Doc Ids"
     }
     visualizer = Visualizer(raw_feature_matrix, doc_ids, titles, x_labels, y_labels,
-                            dummy_similarity_matrix, DataReductionMethod.mds)
+                            dummy_similarity_matrix, DataReductionType.mds)
     print(f"\nVisualizer details are: {visualizer}")
     visualizer.plotSimilarityMatrixHeatmap()
 

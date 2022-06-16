@@ -91,7 +91,7 @@ class NewsGroup20Problem(p.IProblemSpec):
     
     def createLowerTriangularMatrixOfPairs(self):
         """
-        Create triangular matrix indices pairs for the similarity measure
+        Create triangular matrix indices doc_pair_indices for the similarity measure
         """
         matrix = np.zeros((self.__num_docs, self.__num_docs))
         indices = np.tril_indices_from(matrix)
@@ -115,15 +115,15 @@ class NewsGroup20Problem(p.IProblemSpec):
         }
         x_labels = { 
         "2D-Similarity-Plot":"X coordinates",
-        "Similarity-Heatmap": "Book Title Ids"
+        "Similarity-Heatmap": "Document Ids"
         }
         y_labels = { 
             "2D-Similarity-Plot":"Y coordinates",
-            "Similarity-Heatmap": "Book Title Ids"
+            "Similarity-Heatmap": "Document Ids"
         }
         if  self.__visualizer is None:       
-            self.__visualizer = dfv.Visualizer(self.__dense_feature_matrix, self.__doc_ids, 
-                    titles, x_labels, y_labels, self.__similarity_matrix, dfv.DataReductionMethod.mds)
+            self.__visualizer = dfv.Visualizer(self.__dense_feature_matrix, self.__doc_ids,
+                                               titles, x_labels, y_labels, self.__similarity_matrix, dfv.DataReductionType.mds)
         print(f"\nVisualizer details are: {self.__visualizer}")
         self.__visualizer.plot2DRepresentation()
 
@@ -144,8 +144,8 @@ class NewsGroup20Problem(p.IProblemSpec):
             "Similarity-Heatmap": "Book Title Ids"
         }
         if  self.__visualizer is None:
-            self.__visualizer = dfv.Visualizer(self.__dense_feature_matrix, self.__doc_ids, titles, x_labels, y_labels, 
-                                self.__similarity_matrix, dfv.DataReductionMethod.mds)
+            self.__visualizer = dfv.Visualizer(self.__dense_feature_matrix, self.__doc_ids, titles, x_labels, y_labels,
+                                               self.__similarity_matrix, dfv.DataReductionType.mds)
         print(f"\nVisualizer details are: {self.__visualizer}")
         self.__visualizer.plotSimilarityMatrixHeatmap()
 
