@@ -3,7 +3,7 @@
 fse == 1.0.0
 gensim == 4.2.0
 matplotlib == 3.3.4
-nltk == 3.7
+nltk == 3.6.6
 numpy == 1.22.3
 pandas == 1.2.4
 scipy == 1.6.2
