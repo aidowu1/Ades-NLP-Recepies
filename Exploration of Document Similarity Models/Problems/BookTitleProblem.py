@@ -159,7 +159,7 @@ class BookTitleDemo(object):
             sentence_embedding_type=st.SentenceEmbeddingType.use)
         visualizer = self.initializeVisualizer(
             embedder=embedder,
-            dim_reduction_type=dr.DataReductionType.mds, case_type="case_1")
+            dim_reduction_type=dr.DataReductionType.tsne, case_type="case_1")
         assert visualizer != None, error_msg
         visualizer.plot2DRepresentation()
         visualizer.plotSimilarityMatrixHeatmap()
@@ -197,7 +197,7 @@ class BookTitleDemo(object):
             sentence_embedding_type=st.SentenceEmbeddingType.tfidf)
         visualizer = self.initializeVisualizer(
             embedder=embedder,
-            dim_reduction_type=dr.DataReductionType.umap, case_type="case_1")
+            dim_reduction_type=dr.DataReductionType.pca, case_type="case_1")
         assert visualizer != None, error_msg
         visualizer.plot2DRepresentation()
         visualizer.plotSimilarityMatrixHeatmap()
@@ -258,6 +258,7 @@ class BookTitleDemo(object):
             "euclidean_scores": euclidean_sim_results.flatten().tolist(),
             "cosine_scores": cosine_sim_results.flatten()
         })
+        results_df.sort_values(by=['cosine_scores', 'euclidean_scores', 'jaccard scores'], ascending=False, inplace=True)
 
         results_df.euclidean_scores = results_df.euclidean_scores.apply(lambda x: round(x, 4))
         results_df.cosine_scores = results_df.cosine_scores.apply(lambda x: round(x, 4))
@@ -270,9 +271,9 @@ class BookTitleDemo(object):
 
 if __name__ == "__main__":
     demo = BookTitleDemo()
-    demo.runSentenceEmbeddingCaseOne()
+    #demo.runSentenceEmbeddingCaseOne()
     #demo.runUSEStsCalculatorCaseOne()
-    #demo.runSBERTStsCalculatorCaseOne()
+    demo.runSBERTStsCalculatorCaseOne()
     #demo.runTFIDFStsCalculatorCaseOne()
     #demo.runSBERTStsCalculatorCaseTwo()
     #demo.runSimilarityCalculationStrategies()

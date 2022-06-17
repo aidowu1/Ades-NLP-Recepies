@@ -45,7 +45,7 @@ class USEStsCalculator(object):
     if sentence_embedding_type == se.SentenceEmbeddingType.use:
         self._model = hub.load(c.USE_MODEL_URL)
     elif sentence_embedding_type == se.SentenceEmbeddingType.sbert:
-        self._model = SentenceTransformer(c.SBERT_MODEL_CONFIG)
+        self._model = SentenceTransformer(c.SBERT_MODEL_CONFIG_1)
     elif sentence_embedding_type == se.SentenceEmbeddingType.tfidf:
         self._model = tf.TfidfFeatureVectorizer()
     self._corpus_embeddings = None

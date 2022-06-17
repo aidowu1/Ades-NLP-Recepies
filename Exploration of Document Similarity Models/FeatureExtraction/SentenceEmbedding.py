@@ -229,5 +229,31 @@ class SentenceEmbedding(object):
         """
         return self.__similarity_matrix_self
 
+    @staticmethod
+    def createEmbeddingForDocs(
+            sentences: List[str],
+            sentence_embedding_type: se.SentenceEmbeddingType
+    ) -> List[float]:
+        """
+        Create the average and SIF sentence embeddings
+        :param sentence: Sentence
+        :param sentence_embedding_type: Sentence type
+        :return: Sentence embedding
+        """
+        model = None
+        n_sentences = len(sentences)
+        word_embedding = Vectors.from_pretrained(c.GLOVE_EMBEDDING_NAME)
+        if sentence_embedding_type is se.SentenceEmbeddingType.average_word_embedding:
+            model = Average(word_embedding, workers=1, lang_freq="en")
+        elif sentence_embedding_type is se.SentenceEmbeddingType.sif_word_embedding:
+            model = SIF(word_embedding, workers=1, lang_freq="en")
+        sentences_tokenized = [s.split() for s in sentences]
+        indexed_sentences = IndexedList(sentences_tokenized)
+        model.train(indexed_sentences)
+        corpus_embeddings = [model.sv[i].tolist() for i in range(n_sentences)]
+        return corpus_embeddings
+
+
+
 
 

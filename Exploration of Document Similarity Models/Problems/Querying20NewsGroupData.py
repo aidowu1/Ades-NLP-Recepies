@@ -55,7 +55,7 @@ class TwentyNewsGroupDemo(object):
         if self.__sentence_embedding_type == se.SentenceEmbeddingType.use:
             self.__model_use = hub.load(c.USE_MODEL_URL)
         elif self.__sentence_embedding_type == se.SentenceEmbeddingType.sbert:
-            self.__model_sbert = SentenceTransformer(c.SBERT_MODEL_CONFIG)
+            self.__model_sbert = SentenceTransformer(c.SBERT_MODEL_CONFIG_1)
         self.__n_docs = n_docs
         self.__raw_corpus = self.__getRadomSampleOf20NewsGroupData()
         self.__clean_corpus = self.__cleanCorpus(self.__raw_corpus)

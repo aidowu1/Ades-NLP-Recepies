@@ -106,7 +106,7 @@ class SBERTStsCalculator(us.USEStsCalculator):
     :param input: Input corpus
     :return:
     """
-    model = SentenceTransformer(c.SBERT_MODEL_CONFIG)
+    model = SentenceTransformer(c.SBERT_MODEL_CONFIG_1)
     return model.encode(input, convert_to_tensor=True)
 
   @staticmethod
