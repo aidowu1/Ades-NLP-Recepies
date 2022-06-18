@@ -271,9 +271,9 @@ class BookTitleDemo(object):
 
 if __name__ == "__main__":
     demo = BookTitleDemo()
-    #demo.runSentenceEmbeddingCaseOne()
+    demo.runSentenceEmbeddingCaseOne()
     #demo.runUSEStsCalculatorCaseOne()
     #demo.runSBERTStsCalculatorCaseOne()
     #demo.runTFIDFStsCalculatorCaseOne()
     #demo.runSBERTStsCalculatorCaseTwo()
-    demo.runSimilarityCalculationStrategies()
+    #demo.runSimilarityCalculationStrategies()

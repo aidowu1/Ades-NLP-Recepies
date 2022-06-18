@@ -231,6 +231,6 @@ if __name__ == "__main__":
     result_df = demo.computeSimilarityPearsonCoefficient()
     print("The results of the STS validation of the actual vs predicted (computed) sentence pair similarity are:\n")
     print(u.Helpers.tableize(result_df))
-    #demo.evaluateSBert()
+
 
 
