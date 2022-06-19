@@ -36,12 +36,13 @@ import Utils as u
 
 logging.basicConfig(format='%(asctime)s : %(threadName)s : %(levelname)s : %(message)s', level=logging.INFO)
 
-class TwentyNewsGroupDemo(object):
+class TwentyNewsGroupSemanticSearchDemo(object):
     """
     20-News Group Problem demo
     """
     def __init__(
             self,
+            query_doc,
             n_docs: int = 100,
             sentence_embedding_type: se.SentenceEmbeddingType = se.SentenceEmbeddingType.use
     ):
@@ -51,6 +52,7 @@ class TwentyNewsGroupDemo(object):
         """
         logging.info("Starting 20-News Group Demo, it will take a couple of seconds to instantiate the "
                      "document embedding models..")
+        self.__query_doc = query_doc
         self.__sentence_embedding_type = sentence_embedding_type
         if self.__sentence_embedding_type == se.SentenceEmbeddingType.use:
             self.__model_use = hub.load(c.USE_MODEL_URL)
@@ -123,7 +125,7 @@ class TwentyNewsGroupDemo(object):
         :param: sentence_embedding_type: Sentence embedding type
         :return: Returns the similarity scores
         """
-        logging.info(f"Processing the search engine for query: {query_doc} ")
+        logging.info(f"Processing the search engine for query: {self.__query_doc} ")
         sts_encode1 = tf.nn.l2_normalize(query_embedding, axis=1)
         sts_encode2 = tf.nn.l2_normalize(corpus_embedding, axis=1)
         cosine_similarities = tf.reduce_sum(tf.multiply(sts_encode1, sts_encode2), axis=1)
@@ -164,18 +166,27 @@ class TwentyNewsGroupDemo(object):
         """
         return self.__raw_corpus
 
-
-
-
-if __name__ == "__main__":
-    problem = TwentyNewsGroupDemo(sentence_embedding_type=se.SentenceEmbeddingType.sbert)
-    data = problem.corpus
+def runSimpleSemanticSearchEngine():
+    """
+    Run Simple Semantic Search Engine Demo
+    Data source is 20 News Group
+    :return: None
+    """
     query_doc = "Computer programming algorithms"
+    problem = TwentyNewsGroupSemanticSearchDemo(
+        query_doc=query_doc,
+        sentence_embedding_type=se.SentenceEmbeddingType.sbert
+    )
+    data = problem.corpus
+
     top_k = 10
     results_df = problem.runDocumentSearch(query_doc=query_doc, top_k=top_k)
     logging.info(f"The results of the top {top_k} documents that match the query are:\n\n")
     print(f"Query doc is: {query_doc}\n")
     print(u.Helpers.tableize(results_df))
-    #print(results_df)
     print("")
+
+
+if __name__ == "__main__":
+    runSimpleSemanticSearchEngine()
 

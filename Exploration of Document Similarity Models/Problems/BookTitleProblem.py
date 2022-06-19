@@ -56,14 +56,14 @@ class BookTitleDemo(object):
     """
     Book title demo
     """
-    def __init__(self):
+    def __init__(self, data_path):
         """
         Constructor
         """
         self.current_path = p.Path.cwd().parent
         print(f"Current path is: {self.current_path}...{c.NEW_LINE}")
         os.chdir(self.current_path)
-        df_corpus = pd.read_csv(r"Data\books.csv", encoding='utf8', error_bad_lines=False)
+        df_corpus = pd.read_csv(data_path, encoding='utf8', error_bad_lines=False)
         n_samples = 60
         df_sample_corpus = df_corpus[:n_samples]
         self.__docs = df_sample_corpus.title.tolist()
@@ -268,12 +268,19 @@ class BookTitleDemo(object):
         print("The results are:")
         print(u.Helpers.tableize(results_df))
 
+def runBookTitleDemo(data_path: str):
+    """
+    Runs the book title demo
+    :return: None
+    """
+    demo = BookTitleDemo(data_path=data_path)
+    demo.runSentenceEmbeddingCaseOne()
+    demo.runUSEStsCalculatorCaseOne()
+    demo.runSBERTStsCalculatorCaseOne()
+    demo.runTFIDFStsCalculatorCaseOne()
+    demo.runSBERTStsCalculatorCaseTwo()
+    demo.runSimilarityCalculationStrategies()
+
 
 if __name__ == "__main__":
-    demo = BookTitleDemo()
-    demo.runSentenceEmbeddingCaseOne()
-    #demo.runUSEStsCalculatorCaseOne()
-    #demo.runSBERTStsCalculatorCaseOne()
-    #demo.runTFIDFStsCalculatorCaseOne()
-    #demo.runSBERTStsCalculatorCaseTwo()
-    #demo.runSimilarityCalculationStrategies()
+    runBookTitleDemo(data_path="Data/books.csv")

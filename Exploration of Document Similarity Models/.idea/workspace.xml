@@ -2,9 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e118e6b-80a0-4b5f-8918-b5a2ed6015d9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ReadMe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo Custom Word Embedding Creation using Gensim.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Document Similarity Measure Based on TF-IDF Feature Vector Extraction.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Document Similarity Problem Demos.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentFeatureVectorExtractionInterface.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DocumentFeatureVisualization.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exploration of Document Similarity Models.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenericDataSerializerComponent.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLPEngineComponent.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProblemSpecificationInterface.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProblemSpecsComponent.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Problems/BookTitleProblem.py" beforeDir="false" afterPath="$PROJECT_DIR$/Problems/BookTitleProblem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/Notebooks/.ipynb_checkpoints/STS-Benchmark-Demo-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/Notebooks/STS-Benchmark-Demo.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/Querying20NewsGroupData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Problems/SimpleSemanticSearchEngine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Problems/STSBenchmarkProblem.py" beforeDir="false" afterPath="$PROJECT_DIR$/Problems/STSBenchmarkProblem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STS-Benchmark-Demo.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TFIDFDocmentVectorExtractor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Text Cleaning using NLP techniques.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/The20NewsGroupProblemDemo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToyProblemDemo.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +127,7 @@
       <recent name="C:\Development\Python\MyGitHub\Ades-NLP-Recepies\Exploration of Document Similarity Models\Problems" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.STSBenchmarkProblem">
+  <component name="RunManager" selected="Python.SimpleSemanticSearchEngine (1)">
     <configuration name="BookTitleProblem" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Creating Custom Word Embeddings" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -123,28 +142,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Problems/BookTitleProblem.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Querying20NewsGroupData" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Creating Custom Word Embeddings" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Problems" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Problems/Querying20NewsGroupData.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -175,6 +172,50 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="SimpleSemanticSearchEngine (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Creating Custom Word Embeddings" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Problems" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Problems/SimpleSemanticSearchEngine.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SimpleSemanticSearchEngine" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Creating Custom Word Embeddings" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Problems" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Development\Python\MyGitHub\Ades-NLP-Recepies\Exploration of Document Similarity Models\Problems\SimpleSemanticSearchEngine.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="The20NewsGroupProblemDemo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Creating Custom Word Embeddings" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -197,28 +238,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for EmbeddingVisulizerTests.TestEmbeddingVisualizer.test_TFIDFStsCalculator_Visualizing_Embeddings_Case_Two_Is_Valid" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="Creating Custom Word Embeddings" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FeatureExtraction/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;EmbeddingVisulizerTests.TestEmbeddingVisualizer.test_TFIDFStsCalculator_Visualizing_Embeddings_Case_Two_Is_Valid&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.SimpleSemanticSearchEngine (1)" />
         <item itemvalue="Python.STSBenchmarkProblem" />
-        <item itemvalue="Python.Querying20NewsGroupData" />
         <item itemvalue="Python.BookTitleProblem" />
+        <item itemvalue="Python.SimpleSemanticSearchEngine" />
         <item itemvalue="Python.The20NewsGroupProblemDemo" />
-        <item itemvalue="Python tests.Unittests for EmbeddingVisulizerTests.TestEmbeddingVisualizer.test_TFIDFStsCalculator_Visualizing_Embeddings_Case_Two_Is_Valid" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +269,7 @@
       <workItem from="1655208260633" duration="585000" />
       <workItem from="1655210646371" duration="30072000" />
       <workItem from="1655376792846" duration="978000" />
-      <workItem from="1655407714796" duration="25121000" />
+      <workItem from="1655407714796" duration="34069000" />
     </task>
     <servers />
   </component>
@@ -293,16 +319,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/ProblemSpecsComponent.py</url>
-          <line>66</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/ProblemSpecsComponent.py</url>
-          <line>79</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Visualization/Tests/VisualizeSimilarityTests.py</url>
           <line>66</line>
@@ -374,12 +390,7 @@
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Problems/Querying20NewsGroupData.py</url>
-          <line>179</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Problems/Querying20NewsGroupData.py</url>
+          <url>file://$PROJECT_DIR$/Problems/SimpleSemanticSearchEngine.py</url>
           <line>155</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
@@ -448,7 +459,7 @@
     <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$Unittests_for_EmbeddingVisulizerTests_TestEmbeddingVisualizer_test_SentenceEmbedding_Visualizing_Embeddings_Case_One_Is_Valid.coverage" NAME="Unittests for EmbeddingVisulizerTests.TestEmbeddingVisualizer.test_SentenceEmbedding_Visualizing_Embeddings_Case_One_Is_Valid Coverage Results" MODIFIED="1655137199489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FeatureExtraction/Tests" />
     <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$The20NewsGroupProblemDemo.coverage" NAME="The20NewsGroupProblemDemo Coverage Results" MODIFIED="1655159941211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$Unittests_for_EmbeddingVisulizerTests_TestEmbeddingVisualizer_test_USEStsCalculator_Visualizing_Embeddings_Case_One_Is_Valid.coverage" NAME="Unittests for EmbeddingVisulizerTests.TestEmbeddingVisualizer.test_USEStsCalculator_Visualizing_Embeddings_Case_One_Is_Valid Coverage Results" MODIFIED="1655138714664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FeatureExtraction/Tests" />
-    <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$STSBenchmarkProblem.coverage" NAME="STSBenchmarkProblem Coverage Results" MODIFIED="1655481222844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Problems" />
+    <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$STSBenchmarkProblem.coverage" NAME="STSBenchmarkProblem Coverage Results" MODIFIED="1655599104988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Problems" />
     <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$Unittests_for_SBERTSentenceEmbedding_TestUSBERTStsCalculator_test_SBERTStsCalculator_computeSimilarities_Is_Valid.coverage" NAME="Unittests for SBERTSentenceEmbedding.TestUSBERTStsCalculator.test_SBERTStsCalculator_computeSimilarities_Is_Valid Coverage Results" MODIFIED="1655063594144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FeatureExtraction/Tests" />
     <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$Unittests_for_SentenceEmbeddingTests_TestSentenceEmbedding_test_SentenceEmbedding_Visualizing_Embeddings_Is_Valid.coverage" NAME="Unittests for SentenceEmbeddingTests.TestSentenceEmbedding.test_SentenceEmbedding_Visualizing_Embeddings_Is_Valid Coverage Results" MODIFIED="1655131489632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FeatureExtraction/Tests" />
     <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$Unittests_for_SentenceEmbeddingTests_TestSentenceEmbedding_test_SentenceEmbedding_computeSimilarities_Using_SIF_Is_Valid.coverage" NAME="Unittests for SentenceEmbeddingTests.TestSentenceEmbedding.test_SentenceEmbedding_computeSimilarities_Using_SIF_Is_Valid Coverage Results" MODIFIED="1655056162088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FeatureExtraction/Tests" />
@@ -458,12 +469,13 @@
     <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$Unittests_for_PointTests_TestPoint_test_Point_Constructor_Is_Valid.coverage" NAME="Unittests for PointTests.TestPoint.test_Point_Constructor_Is_Valid Coverage Results" MODIFIED="1654447492896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Visualization/Tests" />
     <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$Unittests_for_EmbeddingVisulizerTests_TestEmbeddingVisualizer_test_TFIDFStsCalculator_Visualizing_Embeddings_Case_One_Is_Valid.coverage" NAME="Unittests for EmbeddingVisulizerTests.TestEmbeddingVisualizer.test_TFIDFStsCalculator_Visualizing_Embeddings_Case_One_Is_Valid Coverage Results" MODIFIED="1655157684932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FeatureExtraction/Tests" />
     <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$Unittests_for_EmbeddingVisulizerTests_TestEmbeddingVisualizer_test_SentenceEmbedding_Visualizing_Embeddings_Case_Two_Is_Valid.coverage" NAME="Unittests for EmbeddingVisulizerTests.TestEmbeddingVisualizer.test_SentenceEmbedding_Visualizing_Embeddings_Case_Two_Is_Valid Coverage Results" MODIFIED="1655139501697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FeatureExtraction/Tests" />
+    <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$SimpleSemanticSearchEngine__1_.coverage" NAME="SimpleSemanticSearchEngine (1) Coverage Results" MODIFIED="1655599570091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Problems" />
     <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$Unittests_for_SentenceEmbeddingTests_TestSentenceEmbedding_test_SentenceEmbedding_Visualizing_Embeddings_Case_One_Is_Valid.coverage" NAME="Unittests for SentenceEmbeddingTests.TestSentenceEmbedding.test_SentenceEmbedding_Visualizing_Embeddings_Case_One_Is_Valid Coverage Results" MODIFIED="1655135022926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FeatureExtraction/Tests" />
     <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$Unittests_for_SBERTSentenceEmbedding_TestUSBERTStsCalculator_test_SBERTStsCalculator_computeSelfSimilarities_Is_Valid.coverage" NAME="Unittests for SBERTSentenceEmbedding.TestUSBERTStsCalculator.test_SBERTStsCalculator_computeSelfSimilarities_Is_Valid Coverage Results" MODIFIED="1655063537693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FeatureExtraction/Tests" />
     <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$TfidfFeatureExtraction.coverage" NAME="TfidfFeatureExtraction Coverage Results" MODIFIED="1654957858879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FeatureExtraction" />
     <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$Unittests_for_EmbeddingVisulizerTests_TestEmbeddingVisualizer_test_SBERTStsCalculator_Visualizing_Embeddings_Case_One_Is_Valid.coverage" NAME="Unittests for EmbeddingVisulizerTests.TestEmbeddingVisualizer.test_SBERTStsCalculator_Visualizing_Embeddings_Case_One_Is_Valid Coverage Results" MODIFIED="1655147290915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FeatureExtraction/Tests" />
     <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$Unittests_for_SentenceEmbeddingTests_TestSentenceEmbedding_test_SentenceEmbedding_Visualizing_Embeddings_Case_Two_Is_Valid.coverage" NAME="Unittests for SentenceEmbeddingTests.TestSentenceEmbedding.test_SentenceEmbedding_Visualizing_Embeddings_Case_Two_Is_Valid Coverage Results" MODIFIED="1655133164209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FeatureExtraction/Tests" />
-    <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$BookTitleProblem.coverage" NAME="BookTitleProblem Coverage Results" MODIFIED="1655480742115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Problems" />
+    <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$BookTitleProblem.coverage" NAME="BookTitleProblem Coverage Results" MODIFIED="1655598975614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Problems" />
     <SUITE FILE_PATH="coverage/Exploration_of_Document_Similarity_Models$Unittests_for_EmbeddingVisulizerTests_TestEmbeddingVisualizer_test_TFIDFStsCalculator_Visualizing_Embeddings_Case_Two_Is_Valid.coverage" NAME="Unittests for EmbeddingVisulizerTests.TestEmbeddingVisualizer.test_TFIDFStsCalculator_Visualizing_Embeddings_Case_Two_Is_Valid Coverage Results" MODIFIED="1655159272786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FeatureExtraction/Tests" />
   </component>
   <component name="editorHistoryManager">

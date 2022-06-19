@@ -1,0 +1,23 @@
+Notes
+=====
+
+The entry-point for this code are the 3 demo modules located in the Problems folder, namely:
+
+- BookTitleProblem.py
+- SimpleSemanticSearchEngine.py
+- STSBenchmarkProblem.py
+
+This modules can be invoked to run the 3 demos presented in the Pydata 2022 tutorial:
+
+1) Book Title similarity demo
+2) Simple Semantic search demo (using the 20 News group data)
+3) STS Benchmark problem of sentence pairs which was used to demo te comparison of the 5 embedding methods:
+   - TF-IDF
+   - Sentence embedding with Average word embedding
+   - Sentence embedding with Smooth Inverse Frequency (SIF) weighted word embedding
+   - Google's Universal Sentence Encoder (USE)
+   - S-Bert Sentence encoder
+
+You will need to install the library/module dependencies provided in the requirement.txt file.
+This can be done by invoking:
+   - pip install -r requirements.txt

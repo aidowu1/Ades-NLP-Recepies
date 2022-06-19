@@ -43,7 +43,7 @@ class STSbenchmarkProblemDemo():
     """
     Demo of the STS benchmark problem - sentence pair similarity
     """
-    def __init__(self):
+    def __init__(self, data_path: str):
         """
         Constructor
         """
@@ -52,7 +52,7 @@ class STSbenchmarkProblemDemo():
         logging.info(f"Current path is: {self.current_path}...{c.NEW_LINE}")
         logging.info("Constructing sentence embedding models of USE and S-BERT..")
         os.chdir(self.current_path)
-        self.corpus_df = pd.read_csv(r"Data\sts_dev_df.csv")
+        self.corpus_df = pd.read_csv(data_path)
         self.corpus_df["clean_sent_1"] = self.__cleanCorpus(self.corpus_df.sent_1.tolist())
         self.corpus_df["clean_sent_2"] = self.__cleanCorpus(self.corpus_df.sent_2.tolist())
         self.corpus_df["norm_sim"] = self.corpus_df.sim / c.STS_LABEL_MAX_VAL
@@ -225,12 +225,16 @@ class STSbenchmarkProblemDemo():
         evaluator(model=self.__model_sbert, output_path="Data")
 
 
-
-if __name__ == "__main__":
-    demo = STSbenchmarkProblemDemo()
+def runSTSbenchmarkProblemDemo(data_path: str):
+    demo = STSbenchmarkProblemDemo(data_path=data_path)
     result_df = demo.computeSimilarityPearsonCoefficient()
     print("The results of the STS validation of the actual vs predicted (computed) sentence pair similarity are:\n")
     print(u.Helpers.tableize(result_df))
+
+
+if __name__ == "__main__":
+    runSTSbenchmarkProblemDemo(data_path="Data/sts_dev_df.csv")
+
 
 
 
