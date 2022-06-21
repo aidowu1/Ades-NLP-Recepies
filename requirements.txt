@@ -12,7 +12,7 @@ nltk == 3.3
 # TFIDFDocmentVectorExtractor.py: 2
 # The20NewsGroupProblemDemo.py: 22
 # ToyProblemDemo.py: 17
-numpy == 1.17.1
+numpy == 1.22.0
 
 # NLPEngineComponent.py: 47
 # ProblemSpecsComponent.py: 11
