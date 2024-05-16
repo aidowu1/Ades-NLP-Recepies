@@ -48,5 +48,8 @@ You can futher explore these details of the project by running [this Jupyter not
 To install the python package dependencies required to run this notebook, I will advise that you create a virtual environment with the aid of this [requiremnt.txt file](https://github.com/aidowu1/Ades-NLP-Recepies/blob/master/requirements.txt) using this Pip command:
  - pip3 install -r requirements.txt
 
+## Pydata 2022 London Conference Presentation (Youtube video)
+https://www.youtube.com/watch?v=qXcRW5fIa1g
+
 
 
