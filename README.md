@@ -36,7 +36,7 @@ Pending items for this project include:
 - add the Quora duplicate problem [see this Kaggle link](https://www.kaggle.com/currie32/predicting-similarity-tfidfvectorizer-doc2vec/data) and use the above models to the problem
     
 Although this project is currently work-in-progress, some of the completed componets of the project include:
-  - [__GenericDataSerializerComponent.py__](https://github.com/aidowu1/Ades-NLP-Recepies/blob/master/Exploration%20of%20Document%20Similarity%20Models/GenericDataSerializerComponent.py): used for getting serialised Problem corous data
+  - [__GenericDataSerializerComponent.py__](https://github.com/aidowu1/Ades-NLP-Recepies/blob/master/Exploration%20of%20Document%20Similarity%20Models/GenericDataSerializerComponent.py): used for getting serialised Problem corpous data
   - [__ProblemSpecificationInterface.py__](https://github.com/aidowu1/Ades-NLP-Recepies/blob/master/Exploration%20of%20Document%20Similarity%20Models/ProblemSpecificationInterface.py): used as an interface abstraction to specify a document similarity problem
   - [__NLPEngineComponent.py__](https://github.com/aidowu1/Ades-NLP-Recepies/blob/master/Exploration%20of%20Document%20Similarity%20Models/NLPEngineComponent.py): used as a NLP pre-processing module for cleaning the raw corpus of text
   - [__DocumentFeatureExtractionInterface.py__](https://github.com/aidowu1/Ades-NLP-Recepies/blob/master/Exploration%20of%20Document%20Similarity%20Models/ProblemSpecificationInterface.py): used as an interface abstraction to specify a number of feature extration models 
